@@ -1,0 +1,381 @@
+/* em is relative to the font-size of its parent 
+   rem is relative to the root font-size
+   em and rem are translated into pixels and it is not standard. They allow give flexibility to designs; scale up or down
+   more on em and rem: https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+   px will always display exactly as its value 
+   Color dropper google extension. click on color and get hex 
+   Remember: you just got some weird results because had an additional star and forward slash... you had already ended the comment
+   Don't have subgrid yet in all browsers. only Firefox has it
+   Margins: define outermost portion 
+   Margin: can accept value of auto which tells browser to define margin for you. In most cases, it will be 0 (which is the initial value for the margin property) or
+           whatever space is availabe on that side. That siad, it can be used for centering. For example, giving a width to an item and then setting the right/left margins to auto, centers the item for you:
+           width: 980px;
+           margin: 0 auto;
+           Note: can only be used for right/left centering AND need to specify a width
+   Padding or Margins: issues with margin, get margin collapse, so need to manage that. So, use them in only in one direction, for example on the bottom. Key: be consistent
+   Padding or Margins: one value; for all sides
+   Padding or Margins: top, right, bottom, left 
+   Padding or Margins: two values; top/bottom and right/left
+   Padding or Margins: three values; top, right/left, bottom
+   Hero class: the hero header or hero image: a prominent image, slider, text, etc. that is front and center
+   viewport width(vw): a value of 1vw is equal to 1% of viewport width
+   viewport height(vh)
+   viewport min(vmin): based on whatever (width or height) is smaller than the other. If viewport height is smaller than the width, 1vmin will be 1% of the height
+   viewport max(vmax)
+   Margin collaps: only happens with top and bottom margins: https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_collapse
+   Grid layout: images work as expect, if set max-width:100% will size down to the grid area you put them in
+   Grid layout: percentage would be percentage of the grid container it is in
+   Grid layout: fr unit (described as a flex unit in the spec) is the distribution of available space. Ex. 4 items if same size; each get 25%. if one item is larger, it will get              laid out first and the rest will get fr of available space. Like auto, it gets its space. most of the time the fr will work like a percentage, it's only when you              have an item that's bigger in one of the tracks
+   Chrome developer tools, when hover over a grid element, can see the tracks on browser
+   Firefox has great flex and grid layout tools; inspect something that has a grid and select grid display settings to see the line numbers (in layout tab)
+   Grid layout: can go with implicit grid if not interested in controlling every single row. when creating webpage often just care about the columns, so will want to make them
+                explicit, but don't often need to specify rows because you want them to just fit the content/be auto-sized. If implicit grid, can't target end of grid with negative numbers, can only do that with explicit grids
+   Pseudo-element: allows you to style a part of an element. For example, the first letter of a paragraph -> p::first-letter{color:}
+   You can position pseudo-elements on the grid
+   Currently, cannot style a grid area that does not have an element in it, so use pseudo-elements to do this for now
+   Cloudinary has ai that if you do a crop, it can find faces
+   Two browsers that don't support new grid specs i10 i11. Do float based layout
+   If browsers come across css they do not know, they'll just ignore it
+   Kinda handy to throw all your grid in a feature query. can easily see what float layout looks like. OR can just put the bits that you need to overwrite in the feature query
+   i11 does not support feature queries
+   Progressive enhancement: the idea is that you are not trying to create pixel perfect layouts across all browsers, but a useable experience across all
+   Subgrid is in Firefox
+   320px smallest device-width
+   Flex-basis allows you to specify the initial/starting size of the element before anything else is computed. Set the intial length to the second flex-itme to 
+   100 pixels: 
+   div: nth-of-type(2){
+     flex-basis: 100px;
+   }
+*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap'); this is outdated, loads sequentially */
+
+/* css custom property/variable, so can use that value throughout code and only need to change it in one place
+   Transparent color, last number has to be less than one, for example rgba(0, 214, 170, .5)*/
+/* complementary colors: https://www.canva.com/colors/color-wheel/ OR https://htmlcolorcodes.com/color-picker/ */
+:root {
+    --orangeColor: #ffe082;
+    --orangeColor: #BD89AA;
+    /* --orangeColor: #BD8990; this one might me good */
+    /*--orangeColor: #8990BD;*/
+    --orangeColor: #AC9688 /* this one might be good */
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block; 
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 145px; /* TODO: may want to change to vw */
+    background-color: black;
+    color: #fff;
+    /*text-align: center;*/
+    text-align: left;
+    margin-left: 28px; 
+    border-radius: 6px;
+    /* padding: 5px 0;  top bottom */
+    padding: 5px 5px; /* top bottom */
+    
+    /* position of tooltip */
+    position: absolute;
+    z-index: 5; /* element with highest number is on top */
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+/* @font-face allows you to specify a custom font which can be loaded from remoter server [src: url()] or locally installed [src: local()]
+@font-face{
+    font-family: myIPA; variable name I'm giving to the font  
+    src: local("NotoSans-Medium");    
+}*/
+
+/*header{
+    position: fixed;
+}*/
+
+nav{
+    padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+    margin-bottom: 100px;
+    /* background: var(--NavBackground) */
+    
+}
+
+/* nav disappears on scroll -> first set position: fixed, but then justify-content doesn't work. already disappearing when scroll down which what wanted */
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+nav li{
+    list-style: none; /* removes bullet points from each list item */
+     
+}
+
+nav a{
+    padding: 0.5em 1em; /* around each link top and bottom, this affects the white border we gave it */
+    border: 1px solid transparent; /* transparent border, so when hover over links, they don't move */
+    text-decoration: none; /* gets rid of underline */
+    
+    color: #000; 
+    opacity: 0.6;
+}
+
+/* pseudo-classes */
+nav a:hover,nav a:focus{
+    /* border: 1px solid black;  gives it a black border on hover */
+    opacity: 1;
+    background: #ffe082;
+}
+
+.header{
+    margin: 0 auto 80px; /* margin: 0 auto -> bumps the header to the left and margin: 0 auto 80 px -> give you bottom margin... Three values: top, right and left, then bottom */
+    max-width: 90vw; /* not sure why giving it max-width */
+    font-family: 'Merriweather', serif;
+}
+
+.header a{
+    padding: 0.5em 1em; /* top and bottom having 0.5em | left and right have 1em. there's also short-hand padding with 3 values */
+    background: var(--orangeColor);
+    color: black;
+    /*font-family: myIPA;*/
+}
+
+/*img{
+    width:200px; /* needed to constrain size when first started developing page 
+}*/
+
+/*img{
+    max-width: 100; /* grids work as expected. items given max-width:100 will size down/ fill up the grid area you put them in */
+}*/
+
+/*#featureImage{
+    /*border-radius: 5px; was rounding the corners of the image 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#featureImage:hover{
+    opacity: 0.7;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+ Add Animation - Zoom in the Modal 
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+ The Close Button 
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}*/
+
+/* TODO: Do I need the below for the modal? */
+/* 100% Image Width on Smaller Screens 
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  } */
+
+/* margin: 0 gets rid of slight margin/padding on all sides (top, right, bottom, left) that was on the left, now it's pushed up directly against the left side of page */
+body {
+    background: #fff; /* #728C45 #FBECEF #D4DFBB #D3DFCD #728C45 */
+    font-family: sans-serif;
+    margin: 0; 
+}
+
+/*.hero{
+    display: grid; 
+    grid-template-columns: 7vw 40vw 20px 80px 1fr; 
+    grid-template-rows: 7vw auto 20px auto; 
+    margin-bottom: 80px;
+    max-width: 1024px;  limit the size of the grid. don't like how this is working 
+}*/
+
+/* bring the grid in at a point where you have enough room to make it look reasonable. have nice source order of elements, so when smaller width, will just lay out    one after the other without the grid and look nice */
+.hero{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 80px;
+    font-family: 'Merriweather', serif;
+    /* max-width: 900px; wasn't expanding to fit entire page */
+}
+
+/* for browsers that don't support new grid specs. i10 and i11 only support old grid specs 
+   when grid layout comes across a floated img, it becomes a grid item and the float is thrown away because grids don't have floats, but other properties remain like width and is supported
+   TODO: finish float layout. below is float only for the hero img 
+   Note: don't try to replicate grid layouts with floats/javascript, just keep the float layout simple. too much code javascript and these browsers that don't support grid are not that great with javascript either */
+.hero img{
+    float: left;
+    width: 40%; /* giving it a width because it wouldn't be constrained */
+}
+
+/* this is a feature query, you can throw all your grid stuff here
+/* detect if browser supports grid layout. hey browser if support grid, set width (40%) back to 100% */
+@supports(display: grid){
+    .hero img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 650px){
+    .hero{
+        display: grid;
+        grid-template-columns: 7vw 40vw 20px 60px 1fr; /* can use any length unit */
+        grid-template-rows: 7vw auto 20px auto; /* top, right, bottom, left */
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 650px){
+    nav ul{
+    flex-direction: row;
+    justify-content: center;
+    }
+}
+
+/* pseudo-element */
+.hero::after{
+    content: ' ';
+    background: var(--orangeColor);
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    z-index: 1; /* z-index property sets the stack order of an element. element with larger number is in front of element with smaller number */
+}
+
+.hero img{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    z-index: 2;
+    max-width: 100%; /* will overflow, unless give it a max-width: 100% because in grid layout they size down to the grid area that you put them in */
+    /* border-radius: 5px; smooths out the corners of the image */
+    cursor:pointer; /* zoom-in is also a good value for the cursor property. there are no mobile browsers that support the cursor property */
+    transition: 0.1s;
+}
+
+.hero img:hover{
+    opacity: 0.8;
+}
+
+/*.hero p::first-letter{
+    font-size: larger;
+}*/
+
+/*.hero h2:nth-child(2){
+    first-letter{
+        font-size:larger;
+    }
+}*/
+
+/*.hero-content h2 p:nth-child(2)::first-letter{
+    font-size: larger;
+}*/
+
+/* G in gaizer */
+.hero-content p:nth-of-type(2)::first-letter{
+    font-size: x-large;
+}
+
+/* use negative number to get to end of the grid. Ex. -2 will be second end line of the grid. Can do this when define explicit grid with
+                         grid-template-columns and grid-template-rows. this helps if you ever make changes to the grid; adding or deleting row, you don't have to change this value as well */
+.hero-content{
+    grid-column: 5;
+    grid-row: 2 / -1; 
+}
+
+.panel-intro{
+    margin-bottom: 40px;
+    margin-left: 10vw;
+    font-family: 'Merriweather', serif;
+    /* max-width: 25vw; */
+}
+
+.panel{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3,1fr); /* 3 columns, each 1 fr */
+    grid-template-rows: 325px 325px 100px;
+    max-width: 80vw;
+    margin: 0 auto 80px; /* margin: 0 auto -> centers it */
+}
+
+/* object fit */
+.panel img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* crops outside of image, so it fits into the box and maintains image ratio. if don't want image cropped, used object-fit: contain and the 
+                          images will just keep getting smaller and smaller ration maintained */
+}
+
+.panel img:nth-child(2){
+    grid-column: auto / span 2; /* originally, pictures lined up next to each other in row. Now, 1 and 2 pics on same line, and 2 pic is spanned across 2 columns */
+}
+
+
+.panel img:nth-child(3){
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+}
+
+/* TODO: make responsive: narrower screen size, make it so one image is after the other */
+
+*/
+
+
+img{
+    max-width: 100%
+}
