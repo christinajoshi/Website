@@ -165,37 +165,60 @@ nav a:hover,nav a:focus{
     opacity: 0.7;
 }
 
+/* the modal's background/the container*/
+/* this works with flex too:
+display:flex;
+justify-content: center;
+align-items: center;
+*/
 .modal{
     display: none;
     position: fixed;
     z-index: 10;
-    padding-top: 100px;
+    /*padding-top: 100px;*/
+    padding-top: 20vh; /* this padding was on the image. too high and it was covering up the X to close */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+    width: 100%;  
+    height: 100%; 
+    overflow: auto;  /* controls what happens to content that is too big to fit into the area; scrollbar automatically attached to my image */
+    /* background-color: rgb(0,0,0);  don't need */
+    background-color: rgba(0,0,0,0.9);  /* red, green, blue, and last number is alpha and it's for opacity. 0.0 fully transparent and 1.0 fully opaque */
 }
 
 .modal-content{
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 70vw;
+    height: 70vh;
+    object-fit: contain;
 }
 
 #caption {
-  margin: auto;
+  margin: auto; 
   display: block;
   width: 80%;
   max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  /*padding: 10px 0;  top/bottom AND left/right */
+  /*padding: 2px 0 0 0;*/
+  /* height: 150px; */
 }
+
+/* for iPhone 5; caption was getting caught off at the bottom and padding top affects how far image is from top of screen */
+@media only screen and (max-width:640px){
+    .modal{
+        padding-top: 17vh;
+    }
+}
+
+/* if screen gets smaller than this, the header bunches up 
+@media only screen and (max-width:700px){
+    .modal{
+        padding-top: 17vh;
+    }
+}*/
 
  /*Add Animation - Zoom in the Modal */
 .modal-content, #caption {
