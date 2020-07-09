@@ -299,6 +299,7 @@ body {
     }
 }
 
+/* */
 @media (min-width: 650px){
     .hero{
         display: grid;
@@ -310,8 +311,33 @@ body {
 
 @media (max-width: 650px){
     nav ul{
-    flex-direction: row;
+    display: flex;
     justify-content: center;
+    margin-right: 10vw;
+    }
+    /*.header{
+        margin-left:0;
+    }*/
+}
+
+@media(max-width: 650px){
+    .small-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 100px;
+    }
+    .large-nav{
+        display: none;
+    }
+}
+
+@media(min-width: 650px){
+ 
+    .small-nav{
+        display: none;
+    }
+   .large-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 100px;
     }
 }
 
@@ -375,7 +401,7 @@ body {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(3,1fr); /* 3 columns, each 1 fr */
-    grid-template-rows: 325px 325px 100px;
+    grid-template-rows: 325px 325px; /* getting rid of third row of 100px */
     max-width: 80vw;
     margin: 0 auto 80px; /* margin: 0 auto -> centers it */
 }
@@ -385,7 +411,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover; /* crops outside of image, so it fits into the box and maintains image ratio. if don't want image cropped, used object-fit: contain and the 
-                          images will just keep getting smaller and smaller ration maintained */
+                          images will just keep getting smaller and smaller ratio maintained */
 }
 
 .panel img:nth-child(2){
@@ -395,7 +421,7 @@ body {
 
 .panel img:nth-child(3){
     grid-column: auto / span 2;
-    grid-row: auto / span 2;
+    /*grid-row: auto / span 2; didn't look as good when spanning into another row */
 }
 
 /* TODO: make responsive: narrower screen size, make it so one image is after the other */
