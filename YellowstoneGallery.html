@@ -1,0 +1,101 @@
+<!-- Grid only applies to direct child -->
+<!-- Tinypng.com is quick photo editor -->
+<!-- main tag should be unique to the document; nothing repeated across pages. It cannot be the descendant of an article, aside, footer, header, or nav
+     It specifies the main content of a document -->
+<!-- Cloudinary.com to store pics -->
+<!-- TODO: Lightbox (Modal Image Gallery)-->
+<!-- Remember: shortcut for creating a div with a class, just type .className and hit enter -->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- TODO: is the below still required? -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Christina Joshi</title>
+    <!-- Favicon: optimal 16x16 pixels and 1 KB-->
+    <link rel="icon" type="image/ico" href="/img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script src="main.js"></script>
+</head>
+    <nav class="large-nav">
+        <!-- Logo -->
+        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
+        <ul>
+            <li class="flex-item-home"><a href="index.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Travels</a></li>
+            <li><a href="#">The Arts</a></li>
+        </ul>
+    </nav>  
+    <!-- For mobile devices. TODO: place this at bottom of page, better UI design; easier to reach with thumbs when using phone -->
+    <nav class="small-nav">
+        <!-- Logo -->
+        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
+        <ul>
+            <li class="flex-item-home"><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Travels</a></li>
+            <li><a href="#">Arts</a></li>
+        </ul>
+    </nav>  
+    <main>
+        <div class="header"><!-- want to give this a margin -->
+        <div>One of my favorites:</div>
+        <h1>Yellowstone National Park 
+        <br>An otherworldy view</h1>
+        
+        <div><a href="#" id="exploreMoreLink">Explore More</a></div>
+        </div>
+
+        <!-- Grid 1 when larger device -->
+        <div class= "hero">
+            <!-- feature image -->
+            <img id= "featureImage" src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481278/Geysers_djifk4.jpg" alt="There are only about
+            a 1,000 active geysers left on the planet."/>
+            <div id="modal" class="modal">
+               <!-- &times; is an Entity Reference which are symbols that can be represented. &times is an X--> 
+                <span class="close">&times;</span>
+                <img class="modal-content" id="featureImagePop">
+                <div id="caption"></div>  <!--TODO: can't you just put the caption here?-->
+            </div>
+            <div class="hero-content">
+            <h2>The Geysers</h2>
+                <p>Are plentiful! There are more that 500 geysers at Yellowstone!</p>
+                <p class="tooltip">&#608;&#593;&#618;<span class="tooltiptext">/&#593;&#618;/: 'i' in tide<br>/&#601;r/: 'er' in letter</span>z&#601;r -
+                a hot spring characterized by an intermittent discharge of water ejected turbulently and accompanied by steam.</p>
+        </div>
+        </div>
+        <div class="panel-intro">
+            <h2>The world's first National Park - Established in 1892</h2>
+            <p>Yellowstone's Grand Canyon, lakes, rivers, and waterfalls. Yellowstone's supervolcano and half the world's hydrothermal features; 
+                   extraordinary geysers, hot springs, mudpots, travertine terraces, and fumaroles.. and of course, the wildlife!</p>
+        </div>
+
+       <!-- Grid 2 -->
+        <div class="panel">
+            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481054/CanyonYellowstone_wfucve.jpg" alt="Canyon"/>
+            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481139/MammothSprings_wpdeyn.jpg" alt="Mammoth Springs"/>
+            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594316527/Grand%20Prismatic%20Spring.jpg" alt="Grand Prismatic"/>
+            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594316003/Bison_Field.jpg" alt="Bison"/>
+        </div>
+    </main>
+<!-- Can omit head and body tag. They are optional per w3c.-->
+
+    <footer>
+        <div class="footer">
+            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594597697/At_the_Pier-_smallest_rlob5i.jpg"/>
+            <!--<img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594595459/At_the_Pier_2_Side_nlsbgu.jpg" alt="Clouds and water"/>-->
+            <!--<h3>Some stuff</h3>
+            <ul>
+                <li><a href="#">1 thing</a></li>
+                <li><a href="#">2 thing</a></li>
+                <li><a href="#">3 thing</a></li>
+                <li><a href="#">4 thing</a></li>
+            </ul>-->
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</html>
