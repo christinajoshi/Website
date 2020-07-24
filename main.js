@@ -7,6 +7,8 @@ jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 
 global $, window, document 
 global document  */
 
+/*delete*/
+
 // Simple jQuery event handler
 $(document).ready(function () {
    // Get the modal

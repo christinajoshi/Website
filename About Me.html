@@ -5,12 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"> <!-- windows now ships with edge, incredibly rare ie users -->
+    <meta name="description" content="Full stack developer with a master's degree in computer science. Here to share my love of the arts, nature, and tech. ">
+    <meta name="keywords" content="software development, web design, web development, mobile design"><!-- no longer holds a lot of weight with SEO. describes page content-->
     <meta name="robots" content="NOINDEX, NOFOLLOW">
-    <title>Christina Joshi | Software Developer | About Me</title>
+    <title>Christina Joshi, MS | Software Developer | About Me</title>
+    <link rel="icon" type="image/ico" href="/img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script src="main.js"></script>
 </head>
 <body>
-    <form action="process.js">
+    <!-- may need get rid of method= post and change that to action= post-->
+    <form name="contact" method="POST" data-netlify="true"> 
         <div>
+            <!-- label for ="element_id" The id of the element that the label is bound to -->
+            <!-- placeholder attribute specifies a short hint that describes expected value of an input field -->
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name">
         </div>
@@ -22,6 +40,13 @@
             <label for="message">Message</label><br>
             <textarea name="message" id="message" cols="50"
             rows="5"></textarea>
+        </div>
+        <div>
+            <!-- <label for="upload">Upload image</label><br> -->
+            <input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="7">
+        </div>
+        <!-- spam filtering -->
+        <div data-netlify-recaptcha="true">
         </div>
     </form>
 </body>

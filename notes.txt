@@ -1,1 +1,128 @@
 Activity is cause by surface water that has seeped down into the ground and is superheated by rocks heated by magma and the pressure of cooler water at the top . When water at the top of the geyser's narrow channel cools, the pressure on the water below releases, tremendous amounts of steam force the water out violently.
+
+/*img{
+    max-width: 100%
+}*/
+
+/*img{
+    width:200px; /* needed to constrain size when first started developing page 
+}*/
+
+  /* border-radius: 5px; smooths out the corners of the image */
+
+/*img{
+    max-width: 100; /* grids work as expected, that is, items given max-width:100 will size down/ fill up the grid area you put them in 
+}*/
+
+/* an asterisk selects all elements and give them the same style, ex:
+   *{ font-family: 'Merriweather', serif}; /* specifying font for every page that has style.ss */
+   em is relative to the font-size of its parent 
+   rem is relative to the root font-size
+   em and rem are translated into pixels and it is not standard. They allow give flexibility to designs; scale up or down
+   more on em and rem: https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+   px will always display exactly as its value 
+   Color dropper google extension. click on color and get hex 
+   Remember: you just got some weird results because had an additional star and forward slash... you had already ended the comment
+   Don't have subgrid yet in all browsers. only Firefox has it
+   Margins: define outermost portion 
+   Margin: can accept value of auto which tells browser to define margin for you. In most cases, it will be 0 (which is the initial value for the margin property) or
+           whatever space is availabe on that side. That siad, it can be used for centering. For example, giving a width to an item and then setting the right/left margins to auto, centers the item for you:
+           width: 980px;
+           margin: 0 auto;
+           Note: can only be used for right/left centering AND need to specify a width
+   Padding or Margins: issues with margin, get margin collapse, so need to manage that. So, use them in only in one direction, for example on the bottom. Key: be consistent
+   Padding or Margins: one value; for all sides
+   Padding or Margins: top, right, bottom, left 
+   Padding or Margins: two values; top/bottom and right/left
+   Padding or Margins: three values; top, right/left, bottom
+   Hero class: the hero header or hero image: a prominent image, slider, text, etc. that is front and center
+   viewport width(vw): a value of 1vw is equal to 1% of viewport width
+   viewport height(vh)
+   viewport min(vmin): based on whatever (width or height) is smaller than the other. If viewport height is smaller than the width, 1vmin will be 1% of the height
+   viewport max(vmax)
+   Margin collaps: only happens with top and bottom margins: https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_collapse
+   Grid layout: images work as expect, if set max-width:100% will size down to the grid area you put them in
+   Grid layout: percentage would be percentage of the grid container it is in
+   Grid layout: fr unit (described as a flex unit in the spec) is the distribution of available space. Ex. 4 items if same size; each get 25%. if one item is larger, it will get              laid out first and the rest will get fr of available space. Like auto, it gets its space. most of the time the fr will work like a percentage, it's only when you              have an item that's bigger in one of the tracks
+   Chrome developer tools, when hover over a grid element, can see the tracks on browser
+   Firefox has great flex and grid layout tools; inspect something that has a grid and select grid display settings to see the line numbers (in layout tab)
+   Grid layout: can go with implicit grid if not interested in controlling every single row. when creating webpage often just care about the columns, so will want to make them
+                explicit, but don't often need to specify rows because you want them to just fit the content/be auto-sized. If implicit grid, can't target end of grid with negative numbers, can only do that with explicit grids
+   Pseudo-element: allows you to style a part of an element. For example, the first letter of a paragraph -> p::first-letter{color:}
+   You can position pseudo-elements on the grid
+   Currently, cannot style a grid area that does not have an element in it, so use pseudo-elements to do this for now
+   Cloudinary has ai that if you do a crop, it can find faces
+   Two browsers that don't support new grid specs i10 i11. Do float based layout
+   If browsers come across css they do not know, they'll just ignore it
+   Kinda handy to throw all your grid in a feature query. can easily see what float layout looks like. OR can just put the bits that you need to overwrite in the feature query
+   i11 does not support feature queries
+   Progressive enhancement: the idea is that you are not trying to create pixel perfect layouts across all browsers, but a useable experience across all
+   Subgrid is in Firefox
+   320px smallest device-width
+   Flex-basis allows you to specify the initial/starting size of the element before anything else is computed. Set the intial length to the second flex-itme to 
+   100 pixels: 
+   div: nth-of-type(2){
+     flex-basis: 100px;
+   }
+   Flexbox: justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly
+   some elements in html will have default styling. that's why may want to add
+   margin: 0
+   padding: 0
+   for instance, h1 comes with padding.
+
+   
+/* pseudo-classes - used to define a special state of an element 
+    For example: */
+nav a:hover,nav a:focus{
+    opacity: 1;
+    background: #ffe082;
+}
+
+<!-- Grid only applies to direct child -->
+<!-- Tinypng.com is quick photo editor -->
+<!-- main tag should be unique to the document; nothing repeated across pages. It cannot be the descendant of an article, aside, footer, header, or nav
+     It specifies the main content of a document -->
+<!-- Cloudinary.com to store pics -->
+
+
+   @font-face allows you to specify a custom font which can be loaded from remoter server [src: url()] or locally installed [src: local()]
+@font-face{
+    font-family: myIPA; variable name I'm giving to the font  
+    src: local("NotoSans-Medium");    
+*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap'); this is outdated, loads sequentially */
+
+/* css custom property/variable, so can use that value throughout code and only need to change it in one place
+   Transparent color, last number has to be less than one, for example rgba(0, 214, 170, .5)*/
+/* complementary colors: https://www.canva.com/colors/color-wheel/ OR https://htmlcolorcodes.com/color-picker/ */
+
+/*.footer img{
+    height:100%;
+    width:100%;
+    object-fit: contain; had this greyed out
+    margin: 0.5rem;
+    object-fit: contain;
+}*/
+
+.footer{
+    /*background-color: #1F4954; #F7EEE5;*/
+    /*background-color: */
+    background-color: #F8F3EF;
+    background-color: #E5E5E5;
+    /*margin: 0 auto 80px;*/
+}
+
+/*.hero p::first-letter{
+    font-size: larger;
+}*/
+
+/*.hero h2:nth-child(2){
+    first-letter{
+        font-size:larger;
+    }
+}*/
+
+/*.hero-content h2 p:nth-child(2)::first-letter{
+    font-size: larger;
+}*/
