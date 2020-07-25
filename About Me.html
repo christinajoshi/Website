@@ -26,7 +26,7 @@
 <body>
     <!-- may need get rid of method= post and change that to action= post-->
     <form name="contact" method="POST" data-netlify="true"> 
-        <div>
+        <div> <!-- TODO: wrap all fields in a div tag and style the fields with class called fields -->
             <!-- label for ="element_id" The id of the element that the label is bound to -->
             <!-- placeholder attribute specifies a short hint that describes expected value of an input field -->
             <label for="name">Name</label><br>
@@ -44,6 +44,9 @@
         <div>
             <!-- <label for="upload">Upload image</label><br> -->
             <input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="7">
+        </div>
+        <div>
+            <input type="submit" name="send message" id="send message">
         </div>
         <!-- spam filtering -->
         <div data-netlify-recaptcha="true">
