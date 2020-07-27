@@ -1,3 +1,230 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* TODO:  When narrower screen size, make it so one image is after the other */
 
 /* TODO: may want to add margin: 0 and padding: 0 */
@@ -79,7 +306,7 @@ p{
     padding: 0.5em 1em;  /* top and bottom having 0.5em | left and right have 1em. there's also short-hand padding with 3 values */
     background: var(--taupe);
     color: black;
-    /*font-family: myIPA;*/
+    /*font-family: myIPA;*
 }
 
 #exploreMoreLink{
@@ -410,7 +637,6 @@ body {
     /*height: 100px;*/
     padding: 20px;
     background-color: #E5E5E5;
-    width: 100vw; 
     margin-top: auto; /* Sticky footer. Pushes it as far as it can from its neighboring element */
     margin-bottom: 0;
 }
@@ -436,6 +662,10 @@ body {
     color:black; 
 }
 
+/* honeypot field */
+ .pot{
+    visibility: hidden;
+} 
 
 
 
