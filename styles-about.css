@@ -1,0 +1,116 @@
+/* Styles for About Me page */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding-top: 1rem; /* puts space at the very top, above the nav. this one is important, definitely want to do */
+    /* background-color: #FAFAFA; gray color */
+    /* background: var(--NavBackground) */
+}
+
+/* TODO: nav disappears on scroll - want to change that? */
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li{
+    list-style: none;  /* removes bullet points from each list item */
+     
+}
+
+nav a{
+    padding: 0.5em 1em; /* around each link top and bottom */
+    border: 1px solid transparent; /* transparent border, so when hover over links, they don't move */
+    text-decoration: none; /* gets rid of underline */
+    color: #000; /* darkens the text when hover */
+    opacity: 0.6;
+}
+
+/* margin-right: auto pushes the Home link (a flexbox item) to the left. Setting a margin to auto will cause the item to take up as much space in that direction as they can 
+    note: flexbox was set to justify-content: end which pushes all the items to the right. This, in a way, overrides that for this one item */
+    .flex-item-home{
+        margin-right: auto;
+    }
+
+/* pseudo-classes - used to define a special state of an element */
+nav a:hover,nav a:focus{
+    /* border: 1px solid black;  gives it a black border on hover */
+    opacity: 1;
+    background: #ffe082;
+}
+
+main{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
+    font-size: 1.2em;
+    line-height: 1.4em;
+    background-color: #96C1B7;
+    color: white;
+    font-weight: 300;
+    /* #0F4C81 #C8C99D* #302718 #C7AB59 #DED2A8 #FFF #699E3C */
+    /*  */
+}
+
+.about{
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 10vh
+    /* padding: 25vh; padding pushes the text inside of it together */
+}
+
+.curve1{
+    background-color: #234865;
+    color: white;
+    text-align: center;
+}
+
+#container-contact{
+    /* max-width for responsiveness */
+    max-width: 600px;  
+    max-height: 100vh;
+    margin: 30px auto;
+}
+
+/* honeypot field */
+.pot{
+    visibility: hidden;
+} 
+
+/* larger devices */
+@media(min-width: 650px){
+ 
+    .small-nav{
+        display: none;
+    }
+   .large-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 80px;
+    }
+}
+
+/* for smaller devices */
+@media (max-width: 650px){
+    nav ul{
+    display: flex;
+    justify-content: center;
+    margin-right: 10vw;
+    }
+    .small-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 60px;
+    }
+
+    .large-nav{
+        display: none;
+    }
+}

@@ -11,7 +11,7 @@
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>Christina Joshi, MS | Software Developer | About Me</title>
     <link rel="icon" type="image/ico" href="/img/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-about.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -20,40 +20,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="scripts/jquery-1.10.1.min.js"></script>
-    <script src="scripts/jquery-migrate-1.2.1.min.js"></script>       
-    <script src="main.js"></script>
+    <script src="scripts/jquery-migrate-1.2.1.min.js"></script>        
+    <!-- <script src="main.js"></script> -->
 </head>
-<body>
-    <!-- may need get rid of method= post and change that to action= post-->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"> 
-        <div class="pot">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    <nav id= "nav" class="large-nav">
+        <!-- <a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a> -->
+        <ul>
+            <li><a href="About Me.html">About Me</a></li>
+            <li><a href="#">Travels</a></li>
+            <li><a href="#">The Arts</a></li>
+        </ul>
+    </nav>   
+    <main>
+        <div id="container-about">
+            <p class="about">Hi! I'm a software developer with a love of nature, the arts, and tech. I'm here to explore my creative side. Particularly, to see if my love of composition, 
+                  expressiveness, simplicity, and psychology can come together to create a beautiful experience. Other than coding JavaScript, I'm primarily a back-end developer.
+                  So, let's see how this goes! <br><br>
+                  P.S., To share ideas and places
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#234865" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,
+                144C480,149,600,203,720,197.3C840,192,960,128,1080,101.3C1200,75,1320,85,1380,90.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,
+                320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                <path fill="#CB5450" fill-opacity="1" d="M0,128L26.7,128C53.3,128,107,128,160,138.7C213.3,149,267,171,320,192C373.3,213,427,235,480,234.7C533.3,235,587,213,640,192C693.3,171,747,149,800,128C853.3,107,907,85,960,80C1013.3,75,1067,85,1120,90.7C1173.3,96,1227,96,1280,101.3C1333.3,107,1387,117,1413,122.7L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+            </svg>
         </div>
-        <div> <!-- TODO: wrap all fields in a div tag and style the fields with class called fields -->
+    </main>
+    <div>
+        <p>Get in touch <br>
+    </div>
+    <!-- may need get rid of method= post and change that to action= post-->
+    <div id="container-contact" class="contact">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"> 
+            <div class="pot">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </div>
+            <div> <!-- TODO: wrap all fields in a div tag and style the fields with class called fields -->
             <!-- label for ="element_id" The id of the element that the label is bound to -->
             <!-- placeholder attribute specifies a short hint that describes expected value of an input field -->
             <label for="name">Full Name</label><br>
             <input type="text" name="name" id="name">
-        </div>
-        <div>
+            </div>
+            <div>
             <label for="email">Email</label><br>
             <input type="email" name="email" id="email">
-        </div>
-        <div>
+            </div>
+            <div>
             <label for="message">Message</label><br>
             <textarea name="message" id="message" cols="50"
             rows="5" placeholder="Let me know what you're thinking."></textarea>
-        </div>
-        <div>
-            <!-- <label for="upload">Upload image</label><br> -->
+            </div>
+            <!-- <div>
+            <label for="upload">Upload image</label><br> 
             <input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="7">
-        </div>
-        <div>
+            </div> -->
+            <div>
             <input type="submit" name="send message" id="send message">
-        </div>
-        <!-- spam filtering with Akismet CAPTCHA... really annoying, bad for user experience
-        <div data-netlify-recaptcha="true">
-        </div>-->
-    </form>
-</body>
+            </div>
+            <!-- spam filtering with Akismet CAPTCHA... really annoying, bad for user experience
+            <div data-netlify-recaptcha="true">
+            </div>-->
+        </form>
+    </div>
 </html>
