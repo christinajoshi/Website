@@ -1,4 +1,5 @@
-/* Pastel yellow for sun: #F3DD83 */
+/* Pastel yellow for sun: #F3DD83 
+    Other colors you like: #234865, #CB5450, #66C5E3 */
 /* Styles for About Me page */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
@@ -36,7 +37,6 @@ nav a{
 }
 
 .my-name{
-    color: #234865;
     color: #66C5E3;
     opacity: 1;
 }
