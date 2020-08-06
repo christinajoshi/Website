@@ -1,5 +1,5 @@
 /* Pastel yellow for sun: #F3DD83 
-    Other colors you like: #234865, #CB5450, #66C5E3 */
+    Other colors you like: #234865 (dark blue), #CB5450 (reddish), #66C5E3 (light blue), #96C1B7 (greenish), #F3DD83 (pale yellow) */
 /* Styles for About Me page */
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
@@ -62,8 +62,28 @@ main{
 .about{
     max-width: 1000px;
     margin: 30px auto;
-    padding: 10vh
+    padding: 10vh;
     /* padding: 25vh; padding pushes the text inside of it together */
+}
+
+#animatedLinks{
+    margin-left: 21vw;
+    animation: link-load 300ms ease; /* animation: nameOfAnimation AND how long it should take */
+    color: #234865;
+}
+
+#animatedLinks a{
+    padding: 0em 0em 1.5em 1.5em;
+}
+
+@keyframes link-load{
+    /* 0% what it looks like at beginning, 100% what looks like at end */
+    /* 0%{
+        transform: translate(10px);
+    } */
+    100%{
+        /* transform: translateY(-2vw); */
+    }
 }
 
 .curve1{
@@ -110,5 +130,9 @@ main{
 
     .large-nav{
         display: none;
+    }
+
+    #animatedLinks{
+        margin: 0 auto;
     }
 }

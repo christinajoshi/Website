@@ -1,15 +1,3 @@
-/*
- * Auto-generated content from the Brackets New Project extension.
- */
-
-/* ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code. 
-jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 
-global $, window, document 
-global document  */
-
-/*delete*/
-
-// Simple jQuery event handler
 $(document).ready(function () {
    // Get the modal
 var modal = document.getElementById("modal");
@@ -31,5 +19,25 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
+
 });
+
+
+// // Animating mailto Link
+// window.onload = function(){
+//   var animatedLink = document.getElementById('animatedLink');
+//   animatedLink.style.marginLeft = "25px";
+// };
+
+
+
+
+
+
+
+// // Animating mailto Link
+// $(window).load(function(){
+//   var animatedLink = document.getElementById('animatedLink');
+//   animatedLink.style.marginLeft = "200px";
+// });
 

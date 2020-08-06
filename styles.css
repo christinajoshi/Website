@@ -306,8 +306,7 @@ body {
 
     /* TODO: move this to the left. If can't find a way, delete this */
     .panel-intro{
-        margin-left: 0;
-        background-color: #FFFDD0;
+        margin-left: 0vw;
     }
 
     .small-nav{
