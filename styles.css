@@ -367,7 +367,9 @@ body {
 
 .panel-intro{
     margin-bottom: 40px;
-    margin-left: 10vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    /* margin: 0 auto; */
     font-family: 'Merriweather', serif;
     /* max-width: 25vw; */
 }
