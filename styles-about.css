@@ -61,29 +61,67 @@ main{
 
 .about{
     max-width: 1000px;
-    margin: 30px auto;
+    margin: 30px auto 0px auto; /* top right bottom left */
     padding: 10vh;
     /* padding: 25vh; padding pushes the text inside of it together */
 }
 
-#animatedLinks{
-    margin-left: 21vw;
-    animation: link-load 300ms ease; /* animation: nameOfAnimation AND how long it should take */
+p a{
+    padding: 0em 1.5em 1.5em 0em;
     color: #234865;
+    text-decoration: none;
+    opacity: 0;
 }
 
-#animatedLinks a{
-    padding: 0em 0em 1.5em 1.5em;
+p a:hover, p a:focus{
+    color:black;
 }
 
-@keyframes link-load{
+.animatedLink1{
+    /* animation: shorthand all values */
+    display:inline-block;
+    animation-name: link-load1; 
+    animation-duration: 800ms; 
+    animation-timing-function: ease-out; 
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link-load1{
     /* 0% what it looks like at beginning, 100% what looks like at end */
-    /* 0%{
-        transform: translate(10px);
-    } */
-    100%{
-        /* transform: translateY(-2vw); */
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
     }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.animatedLink2{
+    /* animation: shorthand all values */
+    display:inline-block;
+    animation-name: link-load1; 
+    animation-duration: 800ms; 
+    animation-timing-function: ease-out; 
+    animation-delay: 3500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link-load2{
+    /* 0% what it looks like at beginning, 100% what looks like at end */
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+svg{
+    display: block;
 }
 
 .curve1{
@@ -133,6 +171,7 @@ main{
     }
 
     #animatedLinks{
+        color: #234865;
         margin: 0 auto;
     }
 }
