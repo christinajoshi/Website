@@ -175,3 +175,12 @@ svg{
         margin: 0 auto;
     }
 }
+
+#container-info{
+    background-color: #FEFBF5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh 30vh;
+    max-width: 100vw;
+}
+

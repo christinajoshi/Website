@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="scripts/jquery-1.10.1.min.js"></script>
     <script src="scripts/jquery-migrate-1.2.1.min.js"></script>        
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </head>
     <nav id= "nav" class="large-nav">
         <!-- <a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a> -->
@@ -45,11 +45,12 @@
     <main>
           
         <div id="container-about">
-            <p class="about">Hi! I'm a software developer with a love of nature, the arts, and tech. I'm here to explore my creative side. Particularly, to see if my love of composition, 
+            <p class="about">Hi! I'm Christina, a software developer with a love of nature, the arts, and tech. I'm here to explore my creative side. Particularly, to see if my love of composition, 
                   expressiveness, simplicity, and psychology can come together to create a beautiful experience. Other than coding JavaScript, I'm primarily a back-end developer.
                   So, let's see how this goes! <br><br>
-                <a id="sayHello" class="animatedLink1" href="">Say hello</a>
-                <a id="aboutMe" class="animatedLink2" href="">More about Christina</a>
+                <!-- <a id="sayHello" class="animatedLink1" href="#" onclick="email()" data-mail="christinahello" data-domain="zohomail.com">Say hello</a> -->
+                <a id="sayHello" class="animatedLink1" href="mailto:christinahello@zohomail.com">Say hello</a>
+                <a id="aboutMe" class="animatedLink2" href="#">More about Christina</a> <!-- What I do-->
                   <!-- P.S., To share ideas and places -->
             </p>
             <!-- viewbox = min-x min-y width height -->
@@ -79,37 +80,7 @@
             </svg>
         </div>
     </main>
-    <!-- may need get rid of method= post and change that to action= post-->
-    <div id="container-contact" class="contact">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"> 
-            <div class="pot">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </div>
-            <div> <!-- TODO: wrap all fields in a div tag and style the fields with class called fields -->
-            <!-- label for ="element_id" The id of the element that the label is bound to -->
-            <!-- placeholder attribute specifies a short hint that describes expected value of an input field -->
-            <label for="name">Full Name</label><br>
-            <input type="text" name="name" id="name">
-            </div>
-            <div>
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email">
-            </div>
-            <div>
-            <label for="message">Message</label><br>
-            <textarea name="message" id="message" cols="50"
-            rows="5" placeholder="Let me know what you're thinking."></textarea>
-            </div>
-            <!-- <div>
-            <label for="upload">Upload image</label><br> 
-            <input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="7">
-            </div> -->
-            <div>
-            <input type="submit" name="send message" id="send message">
-            </div>
-            <!-- spam filtering with Akismet CAPTCHA... really annoying, bad for user experience
-            <div data-netlify-recaptcha="true">
-            </div>-->
-        </form>
+    <div id="container-info">
+
     </div>
 </html>
