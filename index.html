@@ -1,111 +1,79 @@
-<!-- TODO: Lightbox (Modal Image Gallery)-->
-<!-- TODO: Facebook Open Graph and Twitter Cards -->
-<!-- Remember: shortcut for creating a div with a class, just type .className and hit enter -->
-<!-- Toggle the 'Toggle device toolbar' if it looks like margins are breaking. For some reason, when do that and check all the
-       different mobile devices, the margins start working again. -->
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <meta http-equiv="X-UA-Compatible" content="ie-edge"> <!-- windows now ships with edge, incredibly rare ie users -->
-    <meta name="description" content="Full stack developer with a master's degree in computer science. Here to share my love of the arts, nature, and tech. ">
-    <meta name="keywords" content="software development, web design, web development, mobile design"><!-- no longer holds a lot of weight with SEO. describes page content-->
-    <meta name="robots" content="NOINDEX, NOFOLLOW">
-    <title>Christina Joshi, MS | Software Developer</title> <!-- describe the page, keywords for SEO -->
-    <!-- TODO: ICO file is mostly deprecated. Create new icon. That said, it still works, even with mobile. Favicon: optimal 16x16 pixels and 1 KB. ICO format supports multiple versions of an image. -->
-    <link rel="icon" type="image/ico" href="/img/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="normalize.css"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <script src="scripts/jquery-1.10.1.min.js"></script>
-    <script src="scripts/jquery-migrate-1.2.1.min.js"></script>    
-    <script src="main.js"></script>
-</head>
-    <nav id= "nav" class="large-nav">
-        <!-- Logo -->
-        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
-        <ul>
-            <li><a href="About Me.html">Christina Joshi</a></li>
-            <!-- <li><a href="#">Travels</a></li> -->
-            <li><a href="#">The Arts</a></li>
-        </ul>
-    </nav>  
-    <!-- For mobile devices. TODO: place this at bottom of page, better UI design; easier to reach with thumbs when using phone -->
-    <nav id="nav" class="small-nav">
-        <!-- Logo -->
-        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
-        <ul>
-            <!-- <li class= ".flex-item-home"><a href="#">Christina Joshi</a></li> -->
-            <li><a href="About Me.html">About</a></li>
-            <!-- <li><a href="#">Travels</a></li> -->
-            <li><a href="#">Arts</a></li>
-        </ul>
-    </nav>  
-    <main>
-        <div class="header"><!-- want to give this a margin -->
-        <div>One of my favorites:</div>
-        <h1>Yellowstone National Park 
-        <br>An otherworldy view</h1>
+<!-- Exclamation point, then tab -> template
+        Ctrl + ? -> comment -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie-edge"> <!-- windows now ships with edge, incredibly rare ie users -->
+            <meta name="description" content="Full stack developer with a master's degree in computer science. Here to share my love of the arts, nature, and tech. ">
+            <meta name="keywords" content="software development, web design, web development, mobile design"><!-- no longer holds a lot of weight with SEO. describes page content-->
+            <meta name="robots" content="NOINDEX, NOFOLLOW">
+            <title>Christina Joshi, MS | Software Developer | About Me</title>
+            <link rel="icon" type="image/ico" href="/img/favicon.ico">
+            <link rel="stylesheet" href="styles-about.css">
+        </head>
+            <nav id= "nav" class="large-nav">
+                <!-- <a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a> -->
+                <ul>
+                    <li><a class="my-name" href="#">Christina Joshi</a></li>
+                    <!-- <li><a href="About Me.html">About Me</a></li> -->
+                    <li><a href="Yellowstone.html">Travels</a></li>
+                    <li><a href="#">The Arts</a></li>
+                </ul>
+            </nav>   
+            <nav id="nav" class="small-nav">
+                <!-- Logo -->
+                <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
+                <ul>
+                    <li class= ".flex-item-home"><a href="#">Christina Joshi</a></li>
+                    <!-- <li><a href="About Me.html">About</a></li> -->
+                    <li><a href="Yellowstone.html">Travels</a></li>
+                    <li><a href="#">Arts</a></li>
+                </ul>
+            </nav>  
+            <main>
+                  
+                <div id="container-about">
+                    <p class="about">Hi! I'm Christina, a software developer with a love of nature, the arts, and tech. I'm here to explore my creative side. Particularly, to see if my love of composition, 
+                          expressiveness, simplicity, and psychology can come together to create a beautiful experience. Other than coding JavaScript, I'm primarily a back-end developer.
+                          So, let's see how this goes! <br><br>
+                        <!-- <a id="sayHello" class="animatedLink1" href="#" onclick="email()" data-mail="christinahello" data-domain="zohomail.com">Say hello</a> -->
+                        <a id="sayHello" class="animatedLink1" href="mailto:christinahello@zohomail.com">Say hello</a>
+                        <a id="aboutMe" class="animatedLink2" href="#">More about Christina</a> <!-- What I do-->
+                          <!-- P.S., To share ideas and places -->
+                    </p>
+                    <!-- viewbox = min-x min-y width height -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        
+                        <circle r="50" cx="50" cy="250" fill="#F3DD83">
+                            <animateTransform attributeName="transform"
+                                                  attributeType="XML"
+                                                  type="translate"
+                                                  from="1300 -100"
+                                                  to="1300 -200"
+                                                  dur="5s"
+                                                  fill="freeze"
+                                                  />
+                          </circle>
+                        <path fill="#234865" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,
+                        144C480,149,600,203,720,197.3C840,192,960,128,1080,101.3C1200,75,1320,85,1380,90.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,
+                        320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                        <path fill="#CB5450" fill-opacity="1" d="M0,128L26.7,128C53.3,128,107,128,160,138.7C213.3,149,267,171,320,192C373.3,213,427,235,480,234.7C533.3,
+                        235,587,213,640,192C693.3,171,747,149,800,128C853.3,107,907,85,960,80C1013.3,75,1067,85,1120,90.7C1173.3,96,1227,96,1280,101.3C1333.3,107,
+                        1387,117,1413,122.7L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,
+                        320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,
+                        320L0,320Z"></path>
         
-        <div><a href="YellowstoneGallery.html" id="exploreMoreLink">Explore More</a></div>
-        </div>
-
-        <!-- Grid 1 when larger device -->
-        <div class= "hero">
-            <!-- feature image -->
-            <img id= "featureImage" src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481278/Geysers_djifk4.jpg" alt="There are only about
-            a 1,000 active geysers left on the planet."/>
-            <div id="modal" class="modal">
-               <!-- &times; is an Entity Reference which are symbols that can be represented. &times is an X--> 
-                <span class="close">&times;</span>
-                <img class="modal-content" id="featureImagePop">
-                <div id="caption"></div>  <!--TODO: can't you just put the caption here?-->
+                        <!-- <path fill="#66C5E3" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,261.3C672,288,768,288,864,288C960,288,1056,288,1152,261.3C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path> -->
+                        
+                    </svg>
+                </div>
+            </main>
+            <div id="container-info">
+        
             </div>
-            <div class="hero-content">
-            <h2>The Geysers</h2>
-                <p>Are plentiful! There are more that 500 geysers at Yellowstone!</p>
-                <p class="tooltip">&#608;&#593;&#618;<span class="tooltiptext">/&#593;&#618;/: 'i' in tide<br>/&#601;r/: 'er' in letter</span>z&#601;r -
-                a hot spring characterized by an intermittent discharge of water ejected turbulently and accompanied by steam.</p>
-        </div>
-        </div>
-        <div class="panel-intro">
-            <h2>The world's first National Park - Established in 1892</h2>
-                <p>Yellowstone's Grand Canyon, lakes, rivers, and waterfalls. Yellowstone's supervolcano and half the world's hydrothermal features; 
-                   extraordinary geysers, hot springs, mudpots, travertine terraces, and fumaroles.. and of course, the wildlife!</p>
-        </div>
-
-       <!-- Grid 2 -->
-        <div class="panel">
-            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481054/CanyonYellowstone_wfucve.jpg" alt="Canyon"/>
-            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1591481139/MammothSprings_wpdeyn.jpg" alt="Mammoth Springs"/>
-            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594316527/Grand%20Prismatic%20Spring.jpg" alt="Grand Prismatic"/>
-            <img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594316003/Bison_Field.jpg" alt="Bison"/>
-        </div>
-        <p style="text-align:center; font: 900;">
-            <a href="#nav" id="goToLink" font-family="'Source Sans Pro',sans-serif">GO TO TOP &uparrow;</a>
-        </p>
-    </main>
-<!-- Can omit head and body tag. They are optional per w3c.-->
-
-    <footer>
-        <div class="footer">
-            <!--<img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594597697/At_the_Pier-_smallest_rlob5i.jpg"/>-->
-            <!--<img src="https://res.cloudinary.com/christinajoshi/image/upload/v1594595459/At_the_Pier_2_Side_nlsbgu.jpg" alt="Clouds and water"/>-->
-            <!--<h3>Some stuff</h3>-->
-            <ul>
-                <li><a href="#">1 thing</a></li>
-                <li><a href="#">2 thing</a></li>
-                <li><a href="#">3 thing</a></li>
-                <li style="font-family: 'Alegreya', serif;">&copy; Christina Joshi</li>
-            </ul>
-        </div>
-    </footer>
-    <script src="main.js"></script>
-</html>
+            <script src="scripts/jquery-1.10.1.min.js"></script>
+            <script src="scripts/jquery-migrate-1.2.1.min.js"></script>        
+            <script src="main.js"></script>
+        </html>
