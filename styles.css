@@ -256,8 +256,7 @@ p{
     /* max-width: 25vw; */
 }
 
-/* this is a feature query, you can throw all your grid stuff here
-/* detect if browser supports grid layout. hey browser if support grid, set width (40%) back to 100% */
+/* TODO: put all grid css in here */
 @supports(display: grid){
     .hero img{
         width: 100%;
@@ -324,8 +323,18 @@ p{
     }
 
     /* TODO: move this to the left. If can't find a way, delete this */
-    .panel-intro p{
+    /* .panel-intro p{
         margin: 0;
+    } */
+
+    .panel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh;
+    }
+
+    .panel img{
+        object-fit: cover;
     }
 
     .small-nav{
