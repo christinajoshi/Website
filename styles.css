@@ -330,11 +330,7 @@ p{
     .panel{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20vh;
-    }
-
-    .panel img{
-        object-fit: cover;
+        grid-template-rows: 30vh 30vh 30vh 30vh;
     }
 
     .small-nav{
@@ -401,6 +397,14 @@ p{
     color:black; 
 }
 
+img.slowloading.yall_lazy{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+}
+
+img.slowloading.yall_loaded{
+    opacity: 1;
+}
 
 
 
