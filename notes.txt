@@ -70,6 +70,11 @@ Activity is cause by surface water that has seeped down into the ground and is s
    padding: 0
    for instance, h1 comes with padding.
 
+
+<!-- <div>
+            <label for="upload">Upload image</label><br> 
+            <input type="file" name="myfile" id="myfile" placeholder="Upload file" rows="7">
+            </div> -->
    
 /* pseudo-classes - used to define a special state of an element 
     For example: */
@@ -125,4 +130,80 @@ nav a:hover,nav a:focus{
 
 /*.hero-content h2 p:nth-child(2)::first-letter{
     font-size: larger;
+}*/
+
+
+
+
+<!-- may need get rid of method= post and change that to action= post-->
+<div id="container-contact" class="contact">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" > 
+            <div class="pot">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </div>
+            <div> <!-- TODO: wrap all fields in a div tag and style the fields with class called fields -->
+            <!-- label for ="element_id" The id of the element that the label is bound to -->
+            <!-- placeholder attribute specifies a short hint that describes expected value of an input field -->
+            <label for="name">Full Name</label><br>
+            <input type="text" name="name" id="name">
+            </div>
+            <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+            </div>
+            <div>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="50"
+            rows="5" placeholder="Let me know what you're thinking."></textarea>
+            </div>
+            <div>
+            <input type="submit" name="send message" id="send message">
+            </div>
+            <!-- spam filtering with Akismet CAPTCHA... really annoying, bad for user experience
+            <div data-netlify-recaptcha="true">
+            </div> -->
+        </form>
+    </div>
+
+    <!-- Can omit head and body tag. They are optional per w3c.-->
+
+    <!-- Remember: shortcut for creating a div with a class, just type .className and hit enter -->
+<!-- Toggle the 'Toggle device toolbar' if it looks like margins are breaking. For some reason, when do that and check all the
+       different mobile devices, the margins start working again. -->
+
+       <!-- Fonts: Open + Sans, Fira + Sans, Cabin, Alegreya + Source + Sans -->
+
+       Favicon: optimal 16x16 pixels and 1 KB. ICO format supports multiple versions of an image. -->
+
+       .panel-intro{
+    margin-bottom: 40px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    /* margin: 0 auto; */
+    font-family: 'Merriweather', serif;
+    /* max-width: 25vw; */
+}
+
+.panel{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3,1fr); /* 3 columns, each 1 fr */
+    grid-template-rows: 325px 325px; /* getting rid of third row of 100px */
+    max-width: 80vw;
+    margin: 0 auto 80px; /* margin: 0 auto -> centers it */
+}
+
+panel-intro{
+    margin-bottom: 40px;
+    margin-left: 10vw;
+    font-family: 'Merriweather', serif;
+    /* max-width: 25vw; */
+}
+
+/*.hero{
+    display: grid; 
+    grid-template-columns: 7vw 40vw 20px 80px 1fr; 
+    grid-template-rows: 7vw auto 20px auto; 
+    margin-bottom: 80px;
+    max-width: 1024px;  limit the size of the grid. don't like how this is working 
 }*/
