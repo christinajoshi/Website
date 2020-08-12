@@ -163,11 +163,15 @@ svg{
     }
     .small-nav{
         padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
-        margin-bottom: 60px;
+        padding-bottom: 1rem;
     }
 
     .large-nav{
         display: none;
+    }
+
+    .about{
+        margin-top: 0;
     }
 
     #animatedLinks{
@@ -176,11 +180,11 @@ svg{
     }
 }
 
-#container-info{
+/* #container-info{
     background-color: #FEFBF5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30vh 30vh;
     max-width: 100vw;
-}
+} */
 

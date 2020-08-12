@@ -54,10 +54,15 @@ nav a{
     }
 
 /* pseudo-classes - used to define a special state of an element */
-nav a:hover,nav a:focus{
+nav a:hover{
     /* border: 1px solid black;  gives it a black border on hover */
     opacity: 1;
     background: #ffe082;
+}
+
+nav a:focus{
+    color: black;
+    opacity:1;
 }
 
 /* No body in .html, but this still affects page. */
@@ -322,11 +327,6 @@ p{
         margin-right: 4vw;
     }
 
-    /* TODO: move this to the left. If can't find a way, delete this */
-    /* .panel-intro p{
-        margin: 0;
-    } */
-
     .panel{
         display: grid;
         grid-template-columns: 1fr;
@@ -397,6 +397,7 @@ p{
     color:black; 
 }
 
+/* Yall lazy loading */
 img.slowloading.yall_lazy{
     opacity: 0;
     transition: all 4s ease-in-out;
