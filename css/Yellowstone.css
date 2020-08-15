@@ -1,0 +1,415 @@
+/* TODO:  When narrower screen size, make it so one image is after the other */
+
+/* TODO: may want to add margin: 0 and padding: 0 */
+*{
+    list-style: none; /* removes bullet points from each list item */
+    text-decoration: none; 
+    font-family: 'Merriweather', serif
+}
+
+:root {
+    /*-- #8990BD; #BD8990; #ffe082; #BD89AA;*/
+    --taupe: #AC9688 
+}
+
+/* Sticky footer */
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Sticky footer */
+main{
+    min-height: 100%;
+}
+
+nav{
+    padding-top: 1rem; /* puts space at the very top, above the nav. this one is important, definitely want to do */
+    /* background: var(--NavBackground) */
+}
+
+/* TODO: nav disappears on scroll - want to change that? */
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li{
+    list-style: none;  /* removes bullet points from each list item */
+}
+
+nav a{
+    padding: 0.5em 1em; /* around each link top and bottom */
+    border: 1px solid transparent; /* transparent border, so when hover over links, they don't move */
+    text-decoration: none; /* gets rid of underline */
+    color: #000; /* darkens the text when hover */
+    opacity: 0.6;
+    /* border-radius: 5px;  */
+}
+
+/* margin-right: auto pushes the Home link (a flexbox item) to the left. Setting a margin to auto will cause the item to take up as much space in that direction as they can 
+    note: flexbox was set to justify-content: end which pushes all the items to the right. This, in a way, overrides that for this one item */
+    .flex-item-home{
+        margin-right: auto;
+    }
+
+/* pseudo-classes - used to define a special state of an element */
+nav a:hover{
+    /* border: 1px solid black;  gives it a black border on hover */
+    opacity: 1;
+    background: #ffe082;
+}
+
+nav a:focus{
+    color: black;
+    opacity:1;
+}
+
+/* No body in .html, but this still affects page. */
+body {
+    background: #fff;
+    font-family: sans-serif;
+    margin: 0; /* This removes the slight default margin, so the image is now pressed up against edge of page */
+}
+
+/* includes Explore More link */
+.header{
+    margin: 0 auto 45px; /* Three values: top, right/left, bottom */
+    max-width: 90vw; 
+    font-family: 'Merriweather', serif;
+}
+
+.header a{
+    padding: 0.5em 1em;  /* Two values: top/bottom and left/right */
+    background: var(--taupe);
+    color: black;
+
+    position: relative;
+    text-decoration: none;
+    /*display: inline-block;*/
+}
+
+.header a:hover{
+    color: #000;
+}
+
+/* Pseudo element. Inserts before the element */
+.header a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* the height of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.header a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.hero{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 80px;
+    font-family: 'Merriweather', serif;
+    /* max-width: 900px; wasn't expanding to fit entire page */
+}
+
+/* TODO: float layout for browsers that don't support new grid specs; i10 and i11 */
+.hero img{
+    float: left;
+    width: 40%; /* giving it a width because it wouldn't be constrained */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* grid layout */
+.hero img{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    z-index: 2;
+    max-width: 100%; /* will overflow, unless give it a max-width: 100% because in grid layout they size down to the grid area that you put them in */
+    cursor:pointer; /* zoom-in is also a good value for the cursor property. there are no mobile browsers that support the cursor property */
+    transition: 0.1s;
+}
+
+.hero img:hover{
+    opacity: 0.8;
+}
+
+/* use negative number to get to end of the grid. Ex. -2 will be second end line of the grid. Can do this when define explicit grid with
+    grid-template-columns and grid-template-rows. this helps if you ever make changes to the grid; adding or deleting row, you don't have to change this value as well */
+.hero-content{
+    grid-column: 5;
+    grid-row: 2 / -1; 
+}
+
+/* G in gaizer */
+.hero-content p:nth-of-type(2)::first-letter{
+    font-size: x-large;
+}
+
+.hero-content p{
+    margin-top: 0;
+}
+
+/* pseudo-element */
+.hero::after{
+    content: ' ';
+    background: var(--taupe);
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    z-index: 1; /* z-index property sets the stack order of an element. element with larger number is in front of element with smaller number */
+}
+
+/* background of modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 20vh; /* this padding was on the image. too high and it was covering up the X to close */
+    left: 0;
+    top: 0;
+    width: 100%;  
+    height: 100%; 
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.9);  /* last number is alpha and it's for opacity. 0.0 fully transparent and 1.0 fully opaque */
+}
+
+/* in this case, the image that is displayed on top of the background */
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 70vw;
+    height: 70vh;
+    object-fit: contain;
+}
+
+ /* animation of zooming in on image */
+ .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  #caption {
+    margin: auto; 
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+  }
+
+/* close the modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Gaizer popup */
+.tooltip{
+    position: relative;
+    display: inline-block; 
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 10vw; /* TODO: may want to change to vw */
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    margin-left: 28px; 
+    border-radius: 6px;
+    padding: 5px 5px; /* top bottom */
+    
+    /* position of tooltip */
+    position: absolute;
+    z-index: 5; /* element with highest number is on top */
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+/* hero-content and panel-intro */
+p{
+    font-family: 'Source Sans Pro', sans-serif; /*  'Open Sans', sans-serif; */
+}
+
+.panel-intro{
+    margin-bottom: 40px;
+    margin-left: 9.5vw;
+    margin-right: 9.5vw;
+    font-family: 'Merriweather', serif;
+    /* max-width: 25vw; */
+}
+
+/* TODO: put all grid css in here */
+@supports(display: grid){
+    .hero img{
+        width: 100%;
+    }
+}
+
+.panel{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3,1fr); /* 3 columns, each 1 fr */
+    grid-template-rows: 325px 325px; /* getting rid of third row of 100px */
+    max-width: 80vw;
+    margin: 0 auto 80px; /* margin: 0 auto -> centers it */
+}
+
+/* object fit */
+.panel img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* crops outside of image, so it fits into the box and maintains image ratio. if don't want image cropped, used object-fit: contain and the 
+                          images will just keep getting smaller and smaller ratio maintained */
+}
+
+.panel img:nth-child(2){
+    grid-column: auto / span 2; /* originally, pictures lined up next to each other in row. Now, 1 and 2 pics on same line, and 2 pic is spanned across 2 columns */
+}
+
+.panel img:nth-child(3){
+    grid-column: auto / span 2;
+    /*grid-row: auto / span 2; didn't look as good when spanning into another row */
+}
+
+#goToLink{
+    text-decoration: none;
+    color: #A0BA8B;
+    text-align: center;
+}
+
+/* smaller devices */
+@media (max-width: 650px){
+    nav ul{
+    display: flex;
+    justify-content: center;
+    margin-right: 10vw;
+    }
+
+    .hero{
+        margin-bottom: 2vh;
+    }
+
+    /* shifting 'The Geysers' text below the hero image, so giving the image a margin-bottom, so text isn't right against it */
+    .hero img{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .hero-content p{
+        margin-top: 0;
+    }
+
+    .panel-intro{
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .panel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 30vh 30vh 30vh;
+    }
+
+    .small-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 60px;
+    }
+
+    .large-nav{
+        display: none;
+    }
+
+    /* for iPhone 5; caption was getting caught off at the bottom and padding top affects how far image is from top of screen */
+    .modal{
+        padding-top: 17vh;
+    }
+}
+/* end smaller devices */
+
+
+/* LARGER devices */
+@media(min-width: 650px){
+    .small-nav{
+        display: none;
+    }
+   .large-nav{
+        padding-top: 1rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
+        margin-bottom: 80px;
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: 7vw 40vw 20px 60px 1fr; /* can use any length unit */
+        grid-template-rows: 7vw auto 20px auto; /* top, right, bottom, left */
+        margin-left: 0;
+    }
+}
+
+.footer{
+    /*background-color: #1F4954; #F7EEE5; #F8F3EF;*/
+    /*height: 100px;*/
+    padding: 20px;
+    background-color: #E5E5E5;
+    margin-top: auto; /* Sticky footer. Pushes it as far as it can from its neighboring element */
+    margin-bottom: 0;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer li{
+    list-style: none;
+}
+
+.footer a{
+    padding: 0.5em 1em;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover, .footer a:focus{
+    background: white;
+    color:black; 
+}
+
+/* Yall lazy loading */
+img.slowloading.yall_lazy{
+    opacity: 0;
+    transition: all 4s ease-in-out;
+}
+
+img.slowloading.yall_loaded{
+    opacity: 1;
+}
+
+
+
+
+
+
+
