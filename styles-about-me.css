@@ -62,19 +62,32 @@ main{
 .about{
     max-width: 1000px;
     margin: 30px auto 0px auto; /* top right bottom left */
-    padding: 10vh;
+    padding: 10vh 10vh 1em 10vh;
     /* padding: 25vh; padding pushes the text inside of it together */
 }
 
-p a{
+#list-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    column-count: 2;
+    padding: 0px 10vh 0px 13vh;
+}
+
+#sayHello, #aboutMe{
     padding: 0em 1.5em 1.5em 0em;
     color: #234865;
     text-decoration: none;
     opacity: 0;
 }
 
-p a:hover, p a:focus{
+#sayHello:hover, #sayHello:focus,  #aboutMe:hover, #aboutMe:focus{
     color:black;
+}
+
+#link-container{
+    max-width: 1000px;
+    margin: 0px auto 0px auto;
+    padding: 1em 10vh 10vh 10vh;
 }
 
 .animatedLink1{
@@ -185,12 +198,6 @@ svg{
         color: #234865;
         margin: 0 auto;
     }
-}
-
-.grid-list{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto 0 auto;
 }
 
 /* #container-info{
