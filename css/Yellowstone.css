@@ -1,5 +1,7 @@
 /* TODO:  When narrower screen size, make it so one image is after the other */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* TODO: may want to add margin: 0 and padding: 0 */
 *{
     list-style: none; /* removes bullet points from each list item */
@@ -68,7 +70,6 @@ nav a:focus{
 /* No body in .html, but this still affects page. */
 body {
     background: #fff;
-    font-family: sans-serif;
     margin: 0; /* This removes the slight default margin, so the image is now pressed up against edge of page */
 }
 
@@ -250,7 +251,8 @@ body {
 
 /* hero-content and panel-intro */
 p{
-    font-family: 'Source Sans Pro', sans-serif; /*  'Open Sans', sans-serif; */
+    /* font-family: 'Source Sans Pro', sans-serif;  'Open Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .panel-intro{

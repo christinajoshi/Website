@@ -1,5 +1,5 @@
 /* Pastel yellow for sun: #F3DD83 
-    Other colors you like: #234865 (dark blue), #CB5450 (reddish), #66C5E3 (light blue), #96C1B7 (greenish), #F3DD83 (pale yellow) */
+    Other colors you like: #234865 (dark blue) (35,72,101), #CB5450 (reddish), #66C5E3 (light blue), #96C1B7 (greenish), #F3DD83 (pale yellow) */
 /* Styles for About Me page */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
@@ -70,15 +70,22 @@ main{
     /* padding: 25vh; padding pushes the text inside of it together */
 }
 
-p a{
+.animatedLink1, .animatedLink2{
     padding: 0em 1.5em 1.5em 0em;
     color: #234865;
     text-decoration: none;
     opacity: 0;
 }
 
-p a:hover, p a:focus{
+.animatedLink1:hover, .animatedLink1:focus, .animatedLink2:hover, .animatedLink2:focus{
     color:black;
+}
+
+/* TODO: edit svg: #234865 and replace png OR provide larger png for iPad Pro */
+#github{
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 7px;
 }
 
 /* #my-pic{
@@ -213,6 +220,7 @@ svg{
 
 footer{
     background-color: white;
+    background-color: #66C5E3;
     /* border-bottom: 15px solid #66C5E3; */
 
 }
