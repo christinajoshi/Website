@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 nav{
     padding-top: 1rem; /* puts space at the very top, above the nav. this one is important, definitely want to do */
 }
@@ -31,7 +35,7 @@ nav a{
     padding: 0.5em 1em; /* around each link top and bottom */
     border: 1px solid transparent; /* transparent border, so when hover over links, they don't move */
     text-decoration: none; /* gets rid of underline */
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
     color: #000; /* darkens the text when hover */
     opacity: 0.6;
 }
@@ -76,6 +80,10 @@ p a{
 p a:hover, p a:focus{
     color:black;
 }
+
+/* #my-pic{
+    width: 25%;
+} */
 
 .animatedLink1{
     /* animation: shorthand all values */
@@ -151,13 +159,15 @@ svg{
 
 /* larger devices */
 @media(min-width: 650px){
- 
     .small-nav{
         display: none;
     }
    .large-nav{
         padding-top: 1.5rem; /* puts space at the very top, above the nav, is how it appears. this one is important, definitely want to do */
         margin-bottom: 0px;
+    }
+    .small-about{
+        display: none;
     }
 }
 
@@ -177,8 +187,14 @@ svg{
         display: none;
     }
 
+    .small-about{
+        max-width: 1000px;
+        margin: 0px auto 0px auto; /* top right bottom left */
+        padding: 10vh 10vh 7vh 10vh;
+    }
+
     .about{
-        margin-top: 0;
+        display: none;
     }
 
     #animatedLinks{
@@ -195,3 +211,59 @@ svg{
     max-width: 100vw;
 } */
 
+footer{
+    background-color: white;
+    /* border-bottom: 15px solid #66C5E3; */
+
+}
+
+footer ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer li{
+    list-style: none;
+    padding: 1em 1em; /* around each link top and bottom */
+    border: 1px solid transparent; /* transparent border, so when hover over links, they don't move */
+    text-decoration: none; /* gets rid of underline */
+    font-family: 'Poppins', sans-serif;;
+    color:black; /* darkens the text when hover */
+    opacity: 0.8;
+}
+
+/* Portrait of iPad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    main{
+        font-size:2em;
+    }    
+    .about{
+        padding-bottom: 2vh;
+    }
+}
+
+/* Portrait of iPad Pro */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    nav a{
+        font-size: 2em;
+   } 
+    main{
+        font-size:2.5em;
+    }    
+    .about{
+        padding-bottom: 2vh;
+    }
+
+    footer li{
+        font-size: 2em;
+    }
+}
