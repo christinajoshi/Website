@@ -1,6 +1,6 @@
 # Website
 
-Basic website to share information about myself and to develop my front-end skills, as the majority of work I've done is back-end. 
+Basic website to share information about myself and to develop my front-end skills, as the majority of work I've done is back-end. No front-end frameworks or templates used. This is soley HTML5, CSS3, and JavaScript. I will be playing around with different layouts. 
 Please note: This is very much under construction. Also, I frequently push to Netlify, so can get feedback from friends. 
 Here's the link: https://nifty-wiles-a0f292.netlify.app/ 
 
