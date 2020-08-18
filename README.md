@@ -5,7 +5,7 @@ Please note: This is very much under construction. Also, I frequently push to Ne
 Here's the link: https://nifty-wiles-a0f292.netlify.app/ 
 
 Until I'm ready for the world to see it:
-<meta name="robots" content="NOINDEX, NOFOLLOW">
+meta name="robots" content="NOINDEX, NOFOLLOW"
 
 Currently, consists of:
 a. index.html (hello page)
