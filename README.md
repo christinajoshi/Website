@@ -7,7 +7,7 @@ Here's the link: https://nifty-wiles-a0f292.netlify.app/
 Until I'm ready for the world to see it:
 meta name="robots" content="NOINDEX, NOFOLLOW"
 
-Currently, consists of:
+Website currently, consists of:
 a. index.html (hello page)
 b. about-me.html (basic info regarding schooling, degrees, internships, work experience, and recent tech)
 c. Yellowstone.html (Yellowstone National Park) 
