@@ -1,9 +1,6 @@
-/* Pastel yellow for sun: #F3DD83 
-    Other colors you like: #234865 (dark blue), #CB5450 (reddish), #66C5E3 (light blue), #96C1B7 (greenish), #F3DD83 (pale yellow) */
+/* Colors: #234865 (dark blue), #CB5450 (reddish), #66C5E3 (light blue), #96C1B7 (greenish), #F3DD83 (pale yellow) */
 /* Styles for About Me page */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* reset */
@@ -49,14 +46,11 @@ nav a:hover,nav a:focus{
 
 main{
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Mulish', sans-serif; */
     font-size: 1.2em;
     line-height: 1.4em;
     background-color: #96C1B7;
     color:white;
     font-weight: 300;
-    /* #0F4C81 #C8C99D* #302718 #C7AB59 #DED2A8 #FFF #699E3C */
-    /*  */
 }
 
 .about{
@@ -64,6 +58,17 @@ main{
     margin: 30px auto 0px auto; /* top right bottom left */
     padding: 10vh 10vh 1em 10vh;
     /* padding: 25vh; padding pushes the text inside of it together */
+}
+
+.animatedLink1, .animatedLink2{
+    padding: 0em 1.5em 1.5em 0em;
+    color: #234865;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.animatedLink1:hover, .animatedLink1:focus, .animatedLink2:hover, .animatedLink2:focus{
+    color:black;
 }
 
 .text-highlight{
@@ -80,16 +85,7 @@ main{
     padding: 0px 10vh 0px 13vh;
 }
 
-#sayHello, #aboutMe{
-    padding: 0em 1.5em 1.5em 0em;
-    color: #234865;
-    text-decoration: none;
-    opacity: 0;
-}
 
-#sayHello:hover, #sayHello:focus,  #aboutMe:hover, #aboutMe:focus{
-    color:black;
-}
 
 /* TODO: edit svg: #234865 and replace png OR provide larger png for iPad Pro */
 #github{
@@ -145,6 +141,16 @@ main{
     100%{
         transform: translateY(0px);
     }
+}
+
+.animatedLink3{
+    display: inline-block;
+    opacity: 0;
+    animation-name: link-load1; 
+    animation-duration: 800ms; 
+    animation-timing-function: ease-out; 
+    animation-delay: 4000ms;
+    animation-fill-mode: forwards;
 }
 
 svg{
@@ -214,11 +220,39 @@ svg{
     }
 }
 
-/* #container-info{
-    background-color: #FEFBF5;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30vh 30vh;
-    max-width: 100vw;
-} */
+/* Portrait of iPad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    main{
+        font-size:2em;
+    }    
+    .about{
+        padding-bottom: 2vh;
+    }
+}
+
+/* Portrait of iPad Pro */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    nav a{
+        font-size: 2em;
+   } 
+    main{
+        font-size:2.5em;
+    }    
+    .about{
+        padding-bottom: 2vh;
+    }
+
+    footer li{
+        font-size: 2em;
+    }
+}
 
