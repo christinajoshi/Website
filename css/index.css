@@ -81,12 +81,7 @@ main{
     color:black;
 }
 
-/* TODO: edit svg: #234865 and replace png OR provide larger png for iPad Pro */
-#github{
-    display: inline-block;
-    vertical-align: middle;
-    padding-bottom: 7px;
-}
+
 
 /* #my-pic{
     width: 25%;
@@ -124,8 +119,24 @@ main{
     animation-fill-mode: forwards;
 }
 
+/* TODO: edit svg: #234865 and replace png OR provide larger png for iPad Pro */
+/* #github{
+    visibility: hidden;
+    vertical-align: middle;
+    padding-bottom: 7px;
+} */
+
+.animatedLink3{
+    display: inline-block;
+    opacity: 0;
+    animation-name: link-load1; 
+    animation-duration: 800ms; 
+    animation-timing-function: ease-out; 
+    animation-delay: 4000ms;
+    animation-fill-mode: forwards;
+}
+
 @keyframes link-load2{
-    /* 0% what it looks like at beginning, 100% what looks like at end */
     0%{
         transform: translateY(20px);
         opacity: 0;
@@ -275,3 +286,14 @@ footer li{
         font-size: 2em;
     }
 }
+
+/* @keyframes link-load2{
+     0% what it looks like at beginning, 100% what looks like at end 
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+} */
