@@ -8,9 +8,10 @@ Until I'm ready for the world to see it:
 <meta name="robots" content="NOINDEX, NOFOLLOW">
 
 Currently, consists of:
-a. index.html (overview of my skills and interests)
-b. Yellowstone.html (Yellowstone National Park) 
-c. Notes (what I've learned thus far)
+a. index.html (hello page)
+b. about-me.html (basic info regarding schooling, degrees, internships, work experience, and recent tech)
+c. Yellowstone.html (Yellowstone National Park) 
+d. Notes (this is sloppy, but some of what I've learned thus far)
 
 I would like to include pages for the following: 
 
