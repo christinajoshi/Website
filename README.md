@@ -1,16 +1,17 @@
 # Website
 
-Basic website to share information about myself and to develop my front-end skills, as the majority of work I've done is back-end. 
+Basic website to share information about myself and to develop my front-end skills, as the majority of work I've done is back-end. No front-end frameworks or templates used. This is soley HTML5, CSS3, and JavaScript. I will be playing around with different layouts. 
 Please note: This is very much under construction. Also, I frequently push to Netlify, so can get feedback from friends. 
 Here's the link: https://nifty-wiles-a0f292.netlify.app/ 
 
 Until I'm ready for the world to see it:
-<meta name="robots" content="NOINDEX, NOFOLLOW">
+meta name="robots" content="NOINDEX, NOFOLLOW"
 
-Currently, consists of:
-a. index.html (overview of my skills and interests)
-b. Yellowstone.html (Yellowstone National Park) 
-c. Notes (what I've learned thus far)
+Website currently, consists of:
+a. index.html (hello page)
+b. about-me.html (basic info regarding schooling, degrees, internships, work experience, and recent tech)
+c. Yellowstone.html (Yellowstone National Park) 
+d. Notes (this is sloppy, but some of what I've learned thus far)
 
 I would like to include pages for the following: 
 
