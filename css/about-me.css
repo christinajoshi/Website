@@ -60,6 +60,12 @@ main{
     /* padding: 25vh; padding pushes the text inside of it together */
 }
 
+.resumeLink{
+    padding: 0em 1.5em 1.5em 0em;
+    color: #234865;
+    /* text-decoration: none; */
+}
+
 .animatedLink1, .animatedLink2{
     padding: 0em 1.5em 1.5em 0em;
     color: #234865;

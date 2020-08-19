@@ -1,15 +1,8 @@
-<!-- Grid only applies to direct child -->
-<!-- Tinypng.com is quick photo editor -->
-<!-- main tag should be unique to the document; nothing repeated across pages. It cannot be the descendant of an article, aside, footer, header, or nav
-     It specifies the main content of a document -->
-<!-- Cloudinary.com to store pics -->
 <!-- TODO: Lightbox (Modal Image Gallery)-->
-<!-- Remember: shortcut for creating a div with a class, just type .className and hit enter -->
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <!-- TODO: is the below still required? -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>Christina Joshi</title>
@@ -22,8 +15,6 @@
     <script src="main.js"></script>
 </head>
     <nav class="large-nav">
-        <!-- Logo -->
-        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
         <ul>
             <!-- <li class="flex-item-home"><a href="index.html">Home</a></li> -->
             <li><a href="#">About Me</a></li>
@@ -33,8 +24,6 @@
     </nav>  
     <!-- For mobile devices. TODO: place this at bottom of page, better UI design; easier to reach with thumbs when using phone -->
     <nav class="small-nav">
-        <!-- Logo -->
-        <!--<a href="#"><img src="https://res.cloudinary.com/christinajoshi/image/upload/v1593291876/Hawaii%20my%20pic.png" alt="my pic"></a>-->
         <ul>
             <li class="flex-item-home"><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
@@ -43,7 +32,7 @@
         </ul>
     </nav>  
     <main>
-        <div class="header"><!-- want to give this a margin -->
+        <div class="header">
         <div>One of my favorites:</div>
         <h1>Yellowstone National Park 
         <br>An otherworldy view</h1>
@@ -60,7 +49,7 @@
                <!-- &times; is an Entity Reference which are symbols that can be represented. &times is an X--> 
                 <span class="close">&times;</span>
                 <img class="modal-content" id="featureImagePop">
-                <div id="caption"></div>  <!--TODO: can't you just put the caption here?-->
+                <div id="caption"></div> 
             </div>
             <div class="hero-content">
             <h2>The Geysers</h2>
