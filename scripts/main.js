@@ -21,48 +21,5 @@ span.onclick = function() {
 }
 });
 
-// function email(){
-//   // window.location.href = 'mailto:' + $(this).data('mail')+'@' + $(this).data('domain') + '?subject=Contact from website';
-//   alert("yo");
-// };
 
-// $('#sayHello').on('click', function(){
-//   var one = "christinahello",
-//         two = "zohomail.com";
-
-//   window.location = 
-//   "mailto:" +
-//   one.substring(0) +
-//   "@" +
-//   two.substring(0)
-// });
-
-// $('#sayHello').click(function(e){
-//   var one = "christinahello",
-//         two = "zohomail.com";
-
-//   location.href() = 
-//   "mailto:" +
-//   one.substring(0) +
-//   "@" +
-//   two.substring(0);
-// });
-
-// // Animating mailto Link
-// window.onload = function(){
-//   var animatedLink = document.getElementById('animatedLink');
-//   animatedLink.style.marginLeft = "25px";
-// };
-
-
-
-
-
-
-
-// // Animating mailto Link
-// $(window).load(function(){
-//   var animatedLink = document.getElementById('animatedLink');
-//   animatedLink.style.marginLeft = "200px";
-// });
 
